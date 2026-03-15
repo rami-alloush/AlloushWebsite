@@ -49,7 +49,7 @@ Add the following secrets:
 
 **Security Note:** Never commit passwords or credentials to your repository. Always use GitHub Secrets.
 
-#### 3. **Push your code:**
+#### 4. **Push your code:**
 
 ```bash
 git add .
@@ -57,7 +57,7 @@ git commit -m "Add cPanel auto-deployment"
 git push origin main
 ```
 
-#### 4. **Monitor deployment:**
+#### 5. **Monitor deployment:**
 
 - Go to the **Actions** tab in your repository
 - Watch the deployment workflow run
@@ -80,37 +80,15 @@ You can also deploy manually:
 3. Click **Run workflow**
 4. Select branch and click **Run workflow**
 
-### Alternative: Using SSH Keys (More Secure)
-
-For better security, use SSH keys instead of passwords:
-
-1. **Generate SSH key on your local machine:**
-
-   ```bash
-   ssh-keygen -t ed25519 -C "github-actions"
-   ```
-
-2. **Add public key to cPanel:**
-
-   ```bash
-   ssh mycpanel
-   cat >> ~/.ssh/authorized_keys
-   # Paste your public key, then Ctrl+D
-   ```
-
-3. **Update workflow to use SSH key:**
-   - Add `CPANEL_SSH_KEY` secret with your private key
-   - Modify workflow to use `key: ${{ secrets.CPANEL_SSH_KEY }}`
-   - Remove `password` parameter
-
 ### Troubleshooting:
 
 **Authentication fails:**
 
-- Verify SSH credentials are correct
-- Check if SSH is enabled on your cPanel
-- Ensure the port is correct (usually 22)
-- Test SSH connection manually: `ssh mycpanel`
+- Verify you copied the **entire** private key including BEGIN/END lines
+- Check if passphrase is correct (or remove if key has no passphrase)
+- Ensure the public key is in `~/.ssh/authorized_keys` on cPanel
+- Test SSH connection manually: `ssh -i ~/.ssh/your_key ramiallo@your-host`
+- Verify username is correct (should be `ramiallo` based on your login)
 
 **Git pull fails:**
 
