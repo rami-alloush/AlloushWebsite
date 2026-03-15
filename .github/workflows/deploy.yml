@@ -1,0 +1,28 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to cPanel via SSH
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to cPanel
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.CPANEL_HOST }}
+          username: ${{ secrets.CPANEL_USERNAME }}
+          password: ${{ secrets.CPANEL_PASSWORD }}
+          port: ${{ secrets.CPANEL_PORT || 22 }}
+          script: |
+            cd ~/repositories/AlloushWebsite
+            git pull origin main
+            echo "Deployment completed successfully!"
