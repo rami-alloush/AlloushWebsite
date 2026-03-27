@@ -48,7 +48,6 @@
       }
     </style>
   </head>
-
   <body class="antialiased selection:bg-energy-blue selection:text-energy-900">
     <!-- Navigation -->
     <nav
@@ -63,7 +62,6 @@
           >
             Dr. Rami <span class="text-energy-blue">Alloush</span>
           </a>
-
           <div class="hidden md:block">
             <a
               href="index.html"
@@ -75,7 +73,6 @@
         </div>
       </div>
     </nav>
-
     <!-- Main Content -->
     <section
       class="relative min-h-screen flex flex-col items-center pt-24 pb-12 px-4"
@@ -83,36 +80,40 @@
       <div
         class="absolute inset-0 bg-gradient-to-b from-energy-900/90 via-energy-900/80 to-energy-900"
       ></div>
-
       <div class="relative z-10 w-full max-w-7xl mx-auto">
         <h1
           class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-8 text-center"
         >
           <span class="gradient-text">AI for Engineering</span>
         </h1>
-
         <p class="text-center text-gray-300 mb-12 text-lg max-w-3xl mx-auto">
           Exploring the intersection of artificial intelligence and engineering
           disciplines
         </p>
-
         <!-- Feedback Form -->
         <div class="w-full flex justify-center">
-          <div class="glass-panel rounded-2xl p-4 w-full max-w-3xl">
+          <div
+            class="glass-panel rounded-2xl p-4 w-full max-w-3xl overflow-hidden"
+          >
             <iframe
               id="feedback-form"
               src="https://docs.google.com/forms/d/e/1FAIpQLSd4NA0DLrewBrrRzEhq5L5AbkvOEnE9dBVs6ISjUQ-_w6aYpw/viewform?embedded=true"
               width="100%"
-              height="1000px"
+              height="2550"
               frameborder="0"
               marginheight="0"
               marginwidth="0"
-              style="border: none; display: block"
+              scrolling="no"
+              style="
+                border: none;
+                display: block;
+                overflow: hidden;
+                max-width: 100%;
+              "
               >Loading…</iframe
             >
           </div>
         </div>
-
         <!-- Sign Up Form -->
         <div class="w-full flex justify-center mt-16">
           <iframe
