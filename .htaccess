@@ -22,8 +22,8 @@
     ExpiresByType application/font-woff "access plus 1 year"
     ExpiresByType application/font-woff2 "access plus 1 year"
     
-    # HTML - 1 hour
-    ExpiresByType text/html "access plus 1 hour"
+    # HTML - no cache (always fetch fresh)
+    ExpiresByType text/html "access plus 0 seconds"
     
     # Default - 1 week
     ExpiresDefault "access plus 1 week"
@@ -46,9 +46,11 @@
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
     
-    # HTML
+    # HTML - never cache, always revalidate
     <FilesMatch "\.(html|htm)$">
-        Header set Cache-Control "public, max-age=3600"
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
     </FilesMatch>
 </IfModule>
 

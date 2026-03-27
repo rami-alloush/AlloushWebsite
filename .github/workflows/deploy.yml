@@ -15,6 +15,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Inject cache version into sw.js
+        run: |
+          COMMIT_SHA=$(git rev-parse --short HEAD)
+          sed -i "s/const CACHE_VERSION = '[^']*'/const CACHE_VERSION = '$COMMIT_SHA'/" sw.js
+          echo "Cache version set to: $COMMIT_SHA"
+
       - name: Deploy to cPanel
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -26,6 +32,9 @@ jobs:
           script: |
             cd ~/repositories/AlloushWebsite
             git pull origin main
+            # Inject commit SHA as cache version in sw.js before copying
+            COMMIT_SHA=$(git rev-parse --short HEAD)
+            sed -i "s/const CACHE_VERSION = '[^']*'/const CACHE_VERSION = '$COMMIT_SHA'/" sw.js
             export DEPLOYPATH=/home/ramiallo/public_html/
             /bin/cp -R * $DEPLOYPATH
-            echo "Deployment completed successfully!"
+            echo "Deployment completed successfully! Cache version: $COMMIT_SHA"

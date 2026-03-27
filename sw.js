@@ -1,86 +1,84 @@
-// Service Worker for Caching - Performance Optimization
-const CACHE_NAME = 'alloush-portfolio-v1';
-const ASSETS_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/ai-for-eng.html',
+// Service Worker - Network-first for HTML, Cache-first for static assets
+const CACHE_VERSION = 'dev'; // Replaced automatically with git commit SHA on deploy
+const CACHE_NAME = `alloush-portfolio-${CACHE_VERSION}`;
+
+const STATIC_ASSETS = [
     '/hero-pattern.webp',
     'https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap',
-    'https://cdn.tailwindcss.com'
 ];
 
-// Install event - cache assets
+// Install event - pre-cache static assets only
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME)
-            .then((cache) => {
-                return cache.addAll(ASSETS_TO_CACHE.map(url => new Request(url, { cache: 'reload' })));
-            })
-            .catch(() => {
-                // Silently fail if caching doesn't work
-            })
+            .then((cache) => cache.addAll(STATIC_ASSETS.map(url => new Request(url, { cache: 'reload' }))))
+            .catch(() => { /* Silently fail */ })
     );
+    // Activate new SW immediately without waiting for old tabs to close
     self.skipWaiting();
 });
 
-// Activate event - clean up old caches
+// Activate event - delete ALL old caches
 self.addEventListener('activate', (event) => {
     event.waitUntil(
-        caches.keys().then((cacheNames) => {
-            return Promise.all(
-                cacheNames.map((cacheName) => {
-                    if (cacheName !== CACHE_NAME) {
-                        return caches.delete(cacheName);
-                    }
-                })
-            );
-        })
+        caches.keys().then((cacheNames) =>
+            Promise.all(
+                cacheNames
+                    .filter((name) => name !== CACHE_NAME)
+                    .map((name) => caches.delete(name))
+            )
+        )
     );
     self.clients.claim();
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event
 self.addEventListener('fetch', (event) => {
-    // Skip cross-origin requests
-    if (!event.request.url.startsWith(self.location.origin) && 
+    const url = new URL(event.request.url);
+
+    // --- Network-first for HTML pages ---
+    // Always try to get the freshest HTML from the network.
+    if (event.request.destination === 'document' || url.pathname.endsWith('.html') || url.pathname === '/') {
+        event.respondWith(
+            fetch(event.request)
+                .then((networkResponse) => {
+                    // If we got a valid response, update the cache and return it
+                    if (networkResponse && networkResponse.status === 200) {
+                        const responseToCache = networkResponse.clone();
+                        caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseToCache));
+                    }
+                    return networkResponse;
+                })
+                .catch(() => {
+                    // Network failed, serve cached version as fallback
+                    return caches.match(event.request).then(r => r || caches.match('/index.html'));
+                })
+        );
+        return;
+    }
+
+    // --- Cache-first for static assets (images, fonts, etc.) ---
+    // Skip non-same-origin requests that aren't fonts
+    if (!url.origin.startsWith(self.location.origin) &&
         !event.request.url.startsWith('https://fonts.googleapis.com') &&
-        !event.request.url.startsWith('https://fonts.gstatic.com') &&
-        !event.request.url.startsWith('https://cdn.tailwindcss.com')) {
+        !event.request.url.startsWith('https://fonts.gstatic.com')) {
         return;
     }
 
     event.respondWith(
-        caches.match(event.request)
-            .then((response) => {
-                // Cache hit - return response
-                if (response) {
-                    return response;
+        caches.match(event.request).then((cachedResponse) => {
+            if (cachedResponse) {
+                return cachedResponse; // Serve from cache
+            }
+            // Not in cache - fetch from network and cache it
+            return fetch(event.request.clone()).then((networkResponse) => {
+                if (!networkResponse || networkResponse.status !== 200 || networkResponse.type === 'error') {
+                    return networkResponse;
                 }
-
-                // Clone the request
-                const fetchRequest = event.request.clone();
-
-                return fetch(fetchRequest).then((response) => {
-                    // Check if valid response
-                    if (!response || response.status !== 200 || response.type === 'error') {
-                        return response;
-                    }
-
-                    // Clone the response
-                    const responseToCache = response.clone();
-
-                    // Cache the fetched response
-                    caches.open(CACHE_NAME)
-                        .then((cache) => {
-                            cache.put(event.request, responseToCache);
-                        });
-
-                    return response;
-                });
-            })
-            .catch(() => {
-                // Network request failed, return offline page if available
-                return caches.match('/index.html');
-            })
+                const responseToCache = networkResponse.clone();
+                caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseToCache));
+                return networkResponse;
+            });
+        })
     );
 });
