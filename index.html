@@ -1,986 +1,1415 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio of Dr. Rami M. Alloush, AI and energy technical leader showcasing product ownership, data science, and petroleum engineering achievements." />
-    <meta name="keywords"
-        content="Rami Alloush, AI product owner, energy data, petroleum engineering, upstream data, machine learning, digital transformation, reservoir simulation, technical leader, data science" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Dr. Rami M. Alloush, AI and energy technical leader showcasing product ownership, data science, and petroleum engineering achievements."
+    />
+    <meta
+      name="keywords"
+      content="Rami Alloush, AI product owner, energy data, petroleum engineering, upstream data, machine learning, digital transformation, reservoir simulation, technical leader, data science"
+    />
     <title>Dr. Rami M. Alloush | AI & Energy Technical Leader</title>
-
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="favicon.jpg">
-    <link rel="shortcut icon" type="image/jpeg" href="favicon.jpg">
-    <link rel="apple-touch-icon" href="favicon.jpg">
-    <link rel="preload" href="favicon.jpg" as="image" type="image/jpeg" fetchpriority="high">
-
+    <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+    <link rel="shortcut icon" type="image/jpeg" href="favicon.jpg" />
+    <link rel="apple-touch-icon" href="favicon.jpg" />
+    <link
+      rel="preload"
+      href="favicon.jpg"
+      as="image"
+      type="image/jpeg"
+      fetchpriority="high"
+    />
     <!-- Performance Optimizations: Resource Hints -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="hero-pattern.webp" as="image" type="image/webp" fetchpriority="high">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" as="style">
-
+    <link
+      rel="preload"
+      href="hero-pattern.webp"
+      as="image"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      as="style"
+    />
     <!-- Structured Data for Sitelinks -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Dr. Rami Alloush Portfolio",
-      "url": "https://ramialloush.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://ramialloush.com/#about",
-        "query-input": "required name=search_term_string"
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Dr. Rami Alloush Portfolio",
+        "url": "https://ramialloush.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://ramialloush.com/#about",
+          "query-input": "required name=search_term_string"
+        }
       }
-    }
     </script>
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "SiteNavigationElement",
-          "position": 1,
-          "name": "About",
-          "url": "https://ramialloush.com/#about"
-        },
-        {
-          "@type": "SiteNavigationElement",
-          "position": 2,
-          "name": "Skills",
-          "url": "https://ramialloush.com/#skills"
-        },
-        {
-          "@type": "SiteNavigationElement",
-          "position": 3,
-          "name": "Experience",
-          "url": "https://ramialloush.com/#experience"
-        },
-        {
-          "@type": "SiteNavigationElement",
-          "position": 4,
-          "name": "Education",
-          "url": "https://ramialloush.com/#education"
-        },
-        {
-          "@type": "SiteNavigationElement",
-          "position": 5,
-          "name": "Publications",
-          "url": "https://ramialloush.com/#publications"
-        },
-        {
-          "@type": "SiteNavigationElement",
-          "position": 6,
-          "name": "AI for Engineering",
-          "url": "https://ramialloush.com/ai-for-eng.html"
-        }
-      ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "SiteNavigationElement",
+            "position": 1,
+            "name": "About",
+            "url": "https://ramialloush.com/#about"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 2,
+            "name": "Skills",
+            "url": "https://ramialloush.com/#skills"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 3,
+            "name": "Experience",
+            "url": "https://ramialloush.com/#experience"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 4,
+            "name": "Education",
+            "url": "https://ramialloush.com/#education"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 5,
+            "name": "Publications",
+            "url": "https://ramialloush.com/#publications"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 6,
+            "name": "AI for Engineering",
+            "url": "https://ramialloush.com/ai-for-eng.html"
+          }
+        ]
+      }
     </script>
-
     <!-- Fonts: Manrope & Space Grotesk -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- Tailwind Config -->
     <script>
+      if (typeof tailwind !== "undefined")
         tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Manrope', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
-                        display: ['Space Grotesk', 'Manrope', 'system-ui', '-apple-system', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
-                    },
+          theme: {
+            extend: {
+              fontFamily: {
+                sans: [
+                  "Manrope",
+                  "system-ui",
+                  "-apple-system",
+                  "BlinkMacSystemFont",
+                  "Segoe UI",
+                  "ui-sans-serif",
+                  "system-ui",
+                  "-apple-system",
+                  "BlinkMacSystemFont",
+                  "Segoe UI",
+                  "Roboto",
+                  "Helvetica Neue",
+                  "Arial",
+                  "Noto Sans",
+                  "sans-serif",
+                  "Apple Color Emoji",
+                  "Segoe UI Emoji",
+                  "Segoe UI Symbol",
+                  "Noto Color Emoji",
+                ],
+                display: [
+                  "Space Grotesk",
+                  "Manrope",
+                  "system-ui",
+                  "-apple-system",
+                  "ui-sans-serif",
+                  "system-ui",
+                  "-apple-system",
+                  "BlinkMacSystemFont",
+                  "Segoe UI",
+                  "Roboto",
+                  "Helvetica Neue",
+                  "Arial",
+                  "Noto Sans",
+                  "sans-serif",
+                  "Apple Color Emoji",
+                  "Segoe UI Emoji",
+                  "Segoe UI Symbol",
+                  "Noto Color Emoji",
+                ],
+              },
 
-                    colors: {
-                        energy: {
-                            900: '#0f172a',
-                            800: '#1e293b',
-                            700: '#334155',
-                            gold: '#fbbf24',
-                            blue: '#38bdf8',
-                        }
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "url('hero-pattern.webp')",
-                    }
-                }
-            }
-        }
+              colors: {
+                energy: {
+                  900: "#0f172a",
+                  800: "#1e293b",
+                  700: "#334155",
+                  gold: "#fbbf24",
+                  blue: "#38bdf8",
+                },
+              },
+              backgroundImage: {
+                "hero-pattern": "url('hero-pattern.webp')",
+              },
+            },
+          },
+        };
     </script>
-
     <style>
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
+
+      body {
+        font-family:
+          "Manrope",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background-color: #0f172a;
+        color: #e2e8f0;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .glass-panel {
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .gradient-text {
+        background: linear-gradient(to right, #38bdf8, #fbbf24);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Animation Classes */
+      @keyframes rise {
+        0% {
+          opacity: 0;
+          transform: translateY(28px);
         }
 
-        body {
-            font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background-color: #0f172a;
-            color: #e2e8f0;
-            font-size: 16px;
-            line-height: 1.5;
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
         }
 
-        .glass-panel {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow: 0 0 0 rgba(56, 189, 248, 0.2);
         }
 
-        .gradient-text {
-            background: linear-gradient(to right, #38bdf8, #fbbf24);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        50% {
+          box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+        }
+      }
+
+      @keyframes shimmer {
+        0% {
+          background-position: 0% 50%;
         }
 
-        /* Animation Classes */
-        @keyframes rise {
-            0% {
-                opacity: 0;
-                transform: translateY(28px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        100% {
+          background-position: 100% 50%;
         }
+      }
 
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0);
-            }
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.8s ease-out,
+          transform 0.8s ease-out;
+        will-change: opacity, visibility;
+      }
 
-            50% {
-                transform: translateY(-8px);
-            }
-        }
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+      }
 
-        @keyframes glow {
-            0%,
-            100% {
-                box-shadow: 0 0 0 rgba(56, 189, 248, 0.2);
-            }
+      .animate-rise {
+        animation: rise 0.9s ease-out forwards;
+      }
 
-            50% {
-                box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
-            }
-        }
+      .animate-float-slow {
+        animation: float 6s ease-in-out infinite;
+      }
 
-        @keyframes shimmer {
-            0% {
-                background-position: 0% 50%;
-            }
+      .btn-glow {
+        animation: glow 3.6s ease-in-out infinite;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
 
-            100% {
-                background-position: 100% 50%;
-            }
-        }
+      .btn-glow:hover {
+        transform: translateY(-2px) scale(1.01);
+        box-shadow: 0 10px 30px rgba(56, 189, 248, 0.35);
+      }
 
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-            will-change: opacity, visibility;
-        }
+      .card-lift {
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          box-shadow 0.25s ease;
+      }
 
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: none;
-        }
+      .card-lift:hover {
+        transform: translateY(-6px);
+        border-color: rgba(56, 189, 248, 0.25);
+        box-shadow: 0 15px 35px rgba(15, 23, 42, 0.5);
+      }
 
-        .animate-rise {
-            animation: rise 0.9s ease-out forwards;
-        }
+      .shimmer-text {
+        background: linear-gradient(120deg, #38bdf8, #fbbf24, #38bdf8);
+        background-size: 200% 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shimmer 4s linear infinite;
+      }
 
-        .animate-float-slow {
-            animation: float 6s ease-in-out infinite;
-        }
+      /* Timeline Styles */
+      .timeline-container {
+        position: relative;
+      }
 
-        .btn-glow {
-            animation: glow 3.6s ease-in-out infinite;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
+      .timeline-container::before {
+        content: "";
+        position: absolute;
+        top: 1.5rem;
+        bottom: 0;
+        left: 24px;
+        width: 2px;
+        background: linear-gradient(to bottom, #38bdf8, #fbbf24, #38bdf8);
+        border-radius: 2px;
+      }
 
-        .btn-glow:hover {
-            transform: translateY(-2px) scale(1.01);
-            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.35);
-        }
-
-        .card-lift {
-            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .card-lift:hover {
-            transform: translateY(-6px);
-            border-color: rgba(56, 189, 248, 0.25);
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.5);
-        }
-
-        .shimmer-text {
-            background: linear-gradient(120deg, #38bdf8, #fbbf24, #38bdf8);
-            background-size: 200% 200%;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shimmer 4s linear infinite;
-        }
-
-        /* Timeline Styles */
-        .timeline-container {
-            position: relative;
-        }
-
+      @media (min-width: 768px) {
         .timeline-container::before {
-            content: '';
-            position: absolute;
-            top: 1.5rem;
-            bottom: 0;
-            left: 24px;
-            width: 2px;
-            background: linear-gradient(to bottom, #38bdf8, #fbbf24, #38bdf8);
-            border-radius: 2px;
+          left: 50%;
+          margin-left: -1px;
         }
+      }
 
-        @media (min-width: 768px) {
-            .timeline-container::before {
-                left: 50%;
-                margin-left: -1px;
-            }
-        }
+      .timeline-item {
+        position: relative;
+        padding-top: 0.75rem;
+        padding-left: 64px;
+        margin-bottom: 3rem;
+      }
 
+      @media (min-width: 768px) {
         .timeline-item {
-            position: relative;
-            padding-top: 0.75rem;
-            padding-left: 64px;
-            margin-bottom: 3rem;
+          padding-left: 0;
+          padding-right: 0;
         }
 
-        @media (min-width: 768px) {
-            .timeline-item {
-                padding-left: 0;
-                padding-right: 0;
-            }
-
-            .timeline-item:nth-child(odd) {
-                text-align: right;
-                padding-right: 50%;
-                padding-left: 2rem;
-            }
-
-            .timeline-item:nth-child(even) {
-                text-align: left;
-                padding-left: 50%;
-                padding-right: 2rem;
-            }
+        .timeline-item:nth-child(odd) {
+          text-align: right;
+          padding-right: 50%;
+          padding-left: 2rem;
         }
 
+        .timeline-item:nth-child(even) {
+          text-align: left;
+          padding-left: 50%;
+          padding-right: 2rem;
+        }
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 24px;
+        top: 1.5rem;
+        transform: none;
+
+        width: 18px;
+        height: 18px;
+        background: #0f172a;
+        border: 3px solid #38bdf8;
+        border-radius: 50%;
+        z-index: 10;
+        transition: all 0.3s ease;
+      }
+
+      .timeline-item:hover .timeline-dot {
+        background: #38bdf8;
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+      }
+
+      @media (min-width: 768px) {
         .timeline-dot {
-            position: absolute;
-            left: 24px;
-            top: 1.5rem;
-            transform: none;
-
-            width: 18px;
-            height: 18px;
-            background: #0f172a;
-            border: 3px solid #38bdf8;
-            border-radius: 50%;
-            z-index: 10;
-            transition: all 0.3s ease;
+          left: 50%;
+          transform: translateX(-50%);
         }
+      }
 
-        .timeline-item:hover .timeline-dot {
-            background: #38bdf8;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
-        }
+      .timeline-content {
+        background: rgba(30, 41, 59, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+        text-align: left;
+      }
 
-        @media (min-width: 768px) {
-            .timeline-dot {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
+      .timeline-content:hover {
+        background: rgba(30, 41, 59, 0.95);
+        border-color: rgba(56, 189, 248, 0.3);
+        transform: translateY(-2px);
+      }
 
-        .timeline-content {
-            background: rgba(30, 41, 59, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-        }
+      /* Mobile Navigation */
+      .mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+      }
 
-        .timeline-content:hover {
-            background: rgba(30, 41, 59, 0.95);
-            border-color: rgba(56, 189, 248, 0.3);
-            transform: translateY(-2px);
-        }
+      .mobile-menu.open {
+        transform: translateX(0);
+      }
 
-        /* Mobile Navigation */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-        }
+      /* Hero Section Optimizations */
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("hero-pattern.webp");
+        background-size: cover;
+        background-position: center;
+      }
 
-        .mobile-menu.open {
-            transform: translateX(0);
-        }
+      .hero-section::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(15, 23, 42, 0.9),
+          rgba(15, 23, 42, 0.8),
+          #0f172a
+        );
+      }
 
-        /* Hero Section Optimizations */
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url('hero-pattern.webp');
-            background-size: cover;
-            background-position: center;
-        }
+      .hero-text {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding: 0 1rem;
+        max-width: 80rem;
+        margin: 0 auto;
+      }
 
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8), #0f172a);
-        }
-
-        .hero-text {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            padding: 0 1rem;
-            max-width: 80rem;
-            margin: 0 auto;
-        }
-
-        .linkedin-profile {
-            color: #38bdf8;
-            font-size: 1.25rem;
-            font-weight: 500;
-        }
+      .linkedin-profile {
+        color: #38bdf8;
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
     </style>
-</head>
-
-<body class="antialiased selection:bg-energy-blue selection:text-energy-900">
-
+  </head>
+  <body class="antialiased selection:bg-energy-blue selection:text-energy-900">
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-panel border-b border-white/10" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <a href="#"
-                    class="flex-shrink-0 font-bold text-xl tracking-tight text-white hover:text-energy-blue transition-colors">
-                    Dr. Rami <span class="text-energy-blue">Alloush</span>
-                </a>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#about"
-                            class="hover:text-energy-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-                        <a href="#skills"
-                            class="hover:text-energy-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
-                        <a href="#experience"
-                            class="hover:text-energy-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
-                        <a href="#education"
-                            class="hover:text-energy-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">Education</a>
-                        <a href="#publications"
-                            class="hover:text-energy-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">Publications</a>
-                        <a href="/ai-for-eng.html"
-                            class="hover:text-energy-blue px-3 py-2 rounded-md text-sm font-medium transition-colors">AI for Engineering</a>
-                    </div>
-                </div>
-
-                <div class="hidden md:block">
-                    <a href="https://www.linkedin.com/in/ramialloush/" target="_blank" rel="noopener noreferrer"
-                        class="bg-energy-blue/10 hover:bg-energy-blue/20 text-energy-blue border border-energy-blue/50 px-4 py-2 rounded-full text-sm font-medium transition-all hover:shadow-[0_0_15px_rgba(56,189,248,0.3)]">
-                        LinkedIn
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2" aria-label="Toggle menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
+    <nav
+      class="fixed w-full z-50 glass-panel border-b border-white/10"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a
+            href="#"
+            class="flex-shrink-0 font-bold text-xl tracking-tight text-white hover:text-energy-blue transition-colors"
+          >
+            Dr. Rami <span class="text-energy-blue">Alloush</span>
+          </a>
+          <!-- Desktop Menu -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="#about"
+                class="hover:text-energy-blue px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >About</a
+              >
+              <a
+                href="#skills"
+                class="hover:text-energy-blue px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Skills</a
+              >
+              <a
+                href="#experience"
+                class="hover:text-energy-blue px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Experience</a
+              >
+              <a
+                href="#education"
+                class="hover:text-energy-blue px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Education</a
+              >
+              <a
+                href="#publications"
+                class="hover:text-energy-blue px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Publications</a
+              >
+              <a
+                href="/ai-for-eng.html"
+                class="hover:text-energy-blue px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >AI for Engineering</a
+              >
             </div>
+          </div>
+          <div class="hidden md:block">
+            <a
+              href="https://www.linkedin.com/in/ramialloush/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-energy-blue/10 hover:bg-energy-blue/20 text-energy-blue border border-energy-blue/50 px-4 py-2 rounded-full text-sm font-medium transition-all hover:shadow-[0_0_15px_rgba(56,189,248,0.3)]"
+            >
+              LinkedIn
+            </a>
+          </div>
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-300 hover:text-white p-2"
+              aria-label="Toggle menu"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-energy-900/95 backdrop-blur-lg z-40 md:hidden">
-            <div class="flex flex-col items-center justify-center h-full space-y-8">
-                <button id="mobile-menu-close" class="absolute top-6 right-6 text-gray-300 hover:text-white p-2"
-                    aria-label="Close menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-                <a href="#about"
-                    class="mobile-nav-link text-xl text-gray-300 hover:text-energy-blue transition-colors">About</a>
-                <a href="#skills"
-                    class="mobile-nav-link text-xl text-gray-300 hover:text-energy-blue transition-colors">Skills</a>
-                <a href="#experience"
-                    class="mobile-nav-link text-xl text-gray-300 hover:text-energy-blue transition-colors">Experience</a>
-                <a href="#education"
-                    class="mobile-nav-link text-xl text-gray-300 hover:text-energy-blue transition-colors">Education</a>
-                <a href="#publications"
-                    class="mobile-nav-link text-xl text-gray-300 hover:text-energy-blue transition-colors">Publications</a>
-                <a href="/ai-for-eng.html"
-                    class="mobile-nav-link text-xl text-gray-300 hover:text-energy-blue transition-colors">AI for Engineering</a>
-                <a href="https://www.linkedin.com/in/ramialloush/" target="_blank" rel="noopener noreferrer"
-                    class="linkedin-profile">
-                    LinkedIn Profile
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-        <div class="hero-text">
-            <div
-                class="inline-block mb-4 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wide uppercase text-energy-blue shimmer-text">
-                Technical Product Owner & Ph.D. Petroleum Engineer
-            </div>
-            <h1
-                class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6 leading-tight font-display">
-                Bridging <span class="gradient-text">AI Innovation</span><br />with <span class="text-white">Energy
-                    Subsurface</span>
-            </h1>
-            <p class="mt-4 max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 font-light">
-                SAFe® 6 Certified leader driving digital transformation in upstream data, numerical modeling, and
-                enterprise software.
-            </p>
-            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#experience"
-                    class="px-8 py-3.5 bg-energy-blue hover:bg-sky-500 text-energy-900 font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:shadow-[0_0_30px_rgba(56,189,248,0.5)] btn-glow">
-                    View Experience
-                </a>
-                <a href="#contact"
-                    class="px-8 py-3.5 glass-panel hover:bg-white/10 text-white font-semibold rounded-lg transition-all border border-white/20 card-lift">
-                    Contact Me
-                </a>
-            </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <a href="#about"
-            class="absolute bottom-10 transform -translate-x-1/2 animate-float-slow text-gray-400 hover:text-white transition-colors"
-            aria-label="Scroll down">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu fixed inset-0 bg-energy-900/95 backdrop-blur-lg z-40 md:hidden"
+      >
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+          <button
+            id="mobile-menu-close"
+            class="absolute top-6 right-6 text-gray-300 hover:text-white p-2"
+            aria-label="Close menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
-        </a>
+          </button>
+          <a
+            href="#about"
+            class="mobile-nav-link text-xl text-gray-300 hover:text-energy-blue transition-colors"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="mobile-nav-link text-xl text-gray-300 hover:text-energy-blue transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#experience"
+            class="mobile-nav-link text-xl text-gray-300 hover:text-energy-blue transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#education"
+            class="mobile-nav-link text-xl text-gray-300 hover:text-energy-blue transition-colors"
+            >Education</a
+          >
+          <a
+            href="#publications"
+            class="mobile-nav-link text-xl text-gray-300 hover:text-energy-blue transition-colors"
+            >Publications</a
+          >
+          <a
+            href="/ai-for-eng.html"
+            class="mobile-nav-link text-xl text-gray-300 hover:text-energy-blue transition-colors"
+            >AI for Engineering</a
+          >
+          <a
+            href="https://www.linkedin.com/in/ramialloush/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="linkedin-profile"
+            >LinkedIn Profile</a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+    >
+      <div class="hero-text">
+        <div
+          class="inline-block mb-4 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wide uppercase text-energy-blue shimmer-text"
+        >
+          Technical Product Owner & Ph.D. Petroleum Engineer
+        </div>
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6 leading-tight font-display"
+        >
+          Bridging <span class="gradient-text">AI Innovation</span>
+          <br />
+          with
+          <span class="text-white">Energy Subsurface</span>
+        </h1>
+        <p
+          class="mt-4 max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 font-light"
+        >
+          SAFe® 6 Certified leader driving digital transformation in upstream
+          data, numerical modeling, and enterprise software.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#experience"
+            class="px-8 py-3.5 bg-energy-blue hover:bg-sky-500 text-energy-900 font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:shadow-[0_0_30px_rgba(56,189,248,0.5)] btn-glow"
+          >
+            View Experience
+          </a>
+          <a
+            href="#contact"
+            class="px-8 py-3.5 glass-panel hover:bg-white/10 text-white font-semibold rounded-lg transition-all border border-white/20 card-lift"
+          >
+            Contact Me
+          </a>
+        </div>
+      </div>
+      <!-- Scroll Indicator -->
+      <a
+        href="#about"
+        class="absolute bottom-10 transform -translate-x-1/2 animate-float-slow text-gray-400 hover:text-white transition-colors"
+        aria-label="Scroll down"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
+      </a>
     </section>
-
     <!-- About Section -->
     <section id="about" class="py-20 md:py-24 bg-energy-900 relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section animate-rise">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 flex items-center">
-                <span class="w-12 h-1 bg-energy-blue mr-4 rounded-full"></span>
-                Professional Summary
-            </h2>
-            <div class="prose prose-invert prose-lg text-gray-300">
-                <p class="mb-6 text-base md:text-lg">
-                    I am a dual-domain expert in <strong class="text-white">Energy</strong> and <strong
-                        class="text-white">Artificial Intelligence</strong>, currently serving as Upstream Data Technology Owner at <strong class="text-white">S&P Global Energy</strong>.
-                </p>
-                <p class="mb-6 text-base md:text-lg">
-                    With over 14 years of experience, I specialize in ML-driven data systems and automation, delivering multimillion-dollar enterprise savings through optimized data extraction and delivery. A U.S. patent holder in industrial automation, I bridge complex subsurface engineering with scalable software and agentic workflows. As an AWS Machine Learning Specialist, I focus on transforming traditional energy operations into high-performance, AI-driven systems.
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-10">
-                    <div class="p-6 glass-panel rounded-xl border-l-4 border-energy-blue card-lift">
-                        <div class="text-3xl font-bold text-white mb-2">14+</div>
-                        <div class="text-sm text-gray-400">Years Experience</div>
-                    </div>
-                    <div class="p-6 glass-panel rounded-xl border-l-4 border-energy-gold card-lift">
-                        <div class="text-3xl font-bold text-white mb-2">Patent Holder</div>
-                        <div class="text-sm text-gray-400">Industrial Automation</div>
-                    </div>
-                    <div class="p-6 glass-panel rounded-xl border-l-4 border-purple-500 card-lift">
-                        <div class="text-3xl font-bold text-white mb-2">Ph.D.</div>
-                        <div class="text-sm text-gray-400">Petroleum Engineering</div>
-                    </div>
-                </div>
+      <div
+        class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section animate-rise"
+      >
+        <h2
+          class="text-2xl md:text-3xl font-bold text-white mb-8 flex items-center"
+        >
+          <span class="w-12 h-1 bg-energy-blue mr-4 rounded-full"></span>
+          Professional Summary
+        </h2>
+        <div class="prose prose-invert prose-lg text-gray-300">
+          <p class="mb-6 text-base md:text-lg">
+            I am a dual-domain expert in
+            <strong class="text-white">Energy</strong> and
+            <strong class="text-white">Artificial Intelligence</strong>,
+            currently serving as Upstream Data Technology Owner at
+            <strong class="text-white">S&P Global Energy</strong>.
+          </p>
+          <p class="mb-6 text-base md:text-lg">
+            With over 14 years of experience, I specialize in ML-driven data
+            systems and automation, delivering multimillion-dollar enterprise
+            savings through optimized data extraction and delivery. A U.S.
+            patent holder in industrial automation, I bridge complex subsurface
+            engineering with scalable software and agentic workflows. As an AWS
+            Machine Learning Specialist, I focus on transforming traditional
+            energy operations into high-performance, AI-driven systems.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-10">
+            <div
+              class="p-6 glass-panel rounded-xl border-l-4 border-energy-blue card-lift"
+            >
+              <div class="text-3xl font-bold text-white mb-2">14+</div>
+              <div class="text-sm text-gray-400">Years Experience</div>
             </div>
+            <div
+              class="p-6 glass-panel rounded-xl border-l-4 border-energy-gold card-lift"
+            >
+              <div class="text-3xl font-bold text-white mb-2">
+                Patent Holder
+              </div>
+              <div class="text-sm text-gray-400">Industrial Automation</div>
+            </div>
+            <div
+              class="p-6 glass-panel rounded-xl border-l-4 border-purple-500 card-lift"
+            >
+              <div class="text-3xl font-bold text-white mb-2">Ph.D.</div>
+              <div class="text-sm text-gray-400">Petroleum Engineering</div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-
     <!-- Skills Section -->
     <section id="skills" class="py-20 md:py-24 bg-energy-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section animate-rise">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-12 text-center">Technical Expertise</h2>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Product Leadership -->
-                <div
-                    class="glass-panel p-6 rounded-2xl hover:bg-white/5 transition-all hover:transform hover:-translate-y-1 card-lift">
-                    <div
-                        class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 text-blue-400">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Product Leadership</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li>• SAFe® Agile (POPM)</li>
-                        <li>• WSJF Prioritization</li>
-                        <li>• PI Planning</li>
-                        <li>• MVP Strategy</li>
-                        <li>• Stakeholder Management</li>
-                    </ul>
-                </div>
-
-                <!-- Software Engineering -->
-                <div
-                    class="glass-panel p-6 rounded-2xl hover:bg-white/5 transition-all hover:transform hover:-translate-y-1">
-                    <div
-                        class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 text-purple-400">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Software Engineering</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li>• C#/.NET Core, Web API</li>
-                        <li>• Python, TypeScript, Angular</li>
-                        <li>• Microservices, CI/CD</li>
-                        <li>• SQL Server, Git</li>
-                        <li>• Django, REST APIs</li>
-                    </ul>
-                </div>
-
-                <!-- Data & Modeling -->
-                <div
-                    class="glass-panel p-6 rounded-2xl hover:bg-white/5 transition-all hover:transform hover:-translate-y-1">
-                    <div
-                        class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 text-green-400">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Data & AI</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li>• Machine Learning (PyTorch, TF)</li>
-                        <li>• AWS SageMaker</li>
-                        <li>• Numerical Methods</li>
-                        <li>• Power BI Visualization</li>
-                        <li>• Mathematical Optimization</li>
-                    </ul>
-                </div>
-
-                <!-- Domain Expertise -->
-                <div
-                    class="glass-panel p-6 rounded-2xl hover:bg-white/5 transition-all hover:transform hover:-translate-y-1">
-                    <div
-                        class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center mb-4 text-amber-400">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Energy Domain</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li>• Reservoir Simulation</li>
-                        <li>• Subsurface Computing</li>
-                        <li>• PPDM Standards</li>
-                        <li>• TNavigator, Petrel, Eclipse</li>
-                        <li>• IPM Suite</li>
-                    </ul>
-                </div>
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section animate-rise"
+      >
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-12 text-center">
+          Technical Expertise
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Product Leadership -->
+          <div
+            class="glass-panel p-6 rounded-2xl hover:bg-white/5 transition-all hover:transform hover:-translate-y-1 card-lift"
+          >
+            <div
+              class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 text-blue-400"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                />
+              </svg>
             </div>
+            <h3 class="text-lg font-bold text-white mb-3">
+              Product Leadership
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>• SAFe® Agile (POPM)</li>
+              <li>• WSJF Prioritization</li>
+              <li>• PI Planning</li>
+              <li>• MVP Strategy</li>
+              <li>• Stakeholder Management</li>
+            </ul>
+          </div>
+          <!-- Software Engineering -->
+          <div
+            class="glass-panel p-6 rounded-2xl hover:bg-white/5 transition-all hover:transform hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4 text-purple-400"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">
+              Software Engineering
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>• C#/.NET Core, Web API</li>
+              <li>• Python, TypeScript, Angular</li>
+              <li>• Microservices, CI/CD</li>
+              <li>• SQL Server, Git</li>
+              <li>• Django, REST APIs</li>
+            </ul>
+          </div>
+          <!-- Data & Modeling -->
+          <div
+            class="glass-panel p-6 rounded-2xl hover:bg-white/5 transition-all hover:transform hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 text-green-400"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Data & AI</h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>• Machine Learning (PyTorch, TF)</li>
+              <li>• AWS SageMaker</li>
+              <li>• Numerical Methods</li>
+              <li>• Power BI Visualization</li>
+              <li>• Mathematical Optimization</li>
+            </ul>
+          </div>
+          <!-- Domain Expertise -->
+          <div
+            class="glass-panel p-6 rounded-2xl hover:bg-white/5 transition-all hover:transform hover:-translate-y-1"
+          >
+            <div
+              class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center mb-4 text-amber-400"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Energy Domain</h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>• Reservoir Simulation</li>
+              <li>• Subsurface Computing</li>
+              <li>• PPDM Standards</li>
+              <li>• TNavigator, Petrel, Eclipse</li>
+              <li>• IPM Suite</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
-
     <!-- Experience Section -->
-    <section id="experience" class="py-20 md:py-24 bg-energy-900 relative overflow-hidden">
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-energy-blue/5 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-energy-gold/5 rounded-full blur-3xl"></div>
-
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 fade-in-section">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-16 text-center">Professional Experience</h2>
-
-            <div class="timeline-container">
-
-                <!-- Job 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span
-                            class="inline-block px-3 py-1 bg-energy-blue/20 text-energy-blue text-xs font-semibold rounded-full mb-3">Current</span>
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-1">Technical Product Owner - Upstream Data
-                        </h3>
-                        <p class="text-energy-gold font-medium text-sm mb-1">S&P Global Energy | Texas, USA</p>
-                        <p class="text-gray-500 text-xs mb-4">Nov. 2023 – Present</p>
-                        <ul class="text-gray-400 text-sm space-y-2">
-                            <li>• Lead technical roadmap for Upstream Data portfolio using SAFe Agile principles</li>
-                            <li>• Translate complex subsurface dataset use-cases into actionable user stories</li>
-                            <li>• Champion CI/CD, observability, and secure design practices</li>
-                            <li>• Manage dependencies across cross-functional teams for 100% feature adoptability</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Job 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-1">Principal Research Engineer / Project
-                            Lead</h3>
-                        <p class="text-energy-gold font-medium text-sm mb-1">University of Wyoming (HESS Partnership)
-                        </p>
-                        <p class="text-gray-500 text-xs mb-4">Jan. 2018 – Nov. 2023</p>
-                        <ul class="text-gray-400 text-sm space-y-2">
-                            <li>• Directed multi-year industry-funded research partnership with HESS</li>
-                            <li>• <strong class="text-energy-blue">Patent Holder:</strong> Alloush, R., Piri, M., & Lowry, E. W. (2024). Automated apparatus for characterization of fluid-solid systems (U.S. Patent No. 12,000,855). U.S. Patent and Trademark Office.</li>
-                            <li>• Improved experimental efficiency by 60% via optimization algorithms</li>
-                            <li>• Mentored team of researchers and graduate students</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Job 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-1">Data Scientist (Volunteer)</h3>
-                        <p class="text-energy-gold font-medium text-sm mb-1">PPDM Association | Remote</p>
-                        <p class="text-gray-500 text-xs mb-4">May 2020 – Present</p>
-                        <ul class="text-gray-400 text-sm space-y-2">
-                            <li>• Improved data processing throughput by 40%</li>
-                            <li>• Architected modular workflow abstractions and automated pipelines</li>
-                            <li>• Built interactive Power BI dashboards for stakeholders</li>
-                            <li>• Recognized as Volunteer of the Month</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Job 4 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-1">Reservoir Engineer</h3>
-                        <p class="text-energy-gold font-medium text-sm mb-1">Saudi Aramco | Dhahran, Saudi Arabia</p>
-                        <p class="text-gray-500 text-xs mb-4">Jun. 2015 – Dec. 2017</p>
-                        <ul class="text-gray-400 text-sm space-y-2">
-                            <li>• Developed 3D geomechanical models (Petrel/Techlog)</li>
-                            <li>• Deployed Artificial Neural Networks (ANN) for well log modeling</li>
-                            <li>• Built custom Python plugins for subsurface simulation suites</li>
-                            <li>• Optimized drilling safety and reservoir performance</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Job 5 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-1">Petroleum Engineer / Software
-                            Instructor</h3>
-                        <p class="text-energy-gold font-medium text-sm mb-1">Egyptian Petroleum Consultants | Cairo,
-                            Egypt</p>
-                        <p class="text-gray-500 text-xs mb-4">Jan. 2012 – Sep. 2012</p>
-                        <ul class="text-gray-400 text-sm space-y-2">
-                            <li>• Improved multiphase flow models by 20% through simulation studies</li>
-                            <li>• Led technical workshops for international customers</li>
-                            <li>• Focused on engineering theory and software application intersection</li>
-                        </ul>
-                    </div>
-                </div>
-
+    <section
+      id="experience"
+      class="py-20 md:py-24 bg-energy-900 relative overflow-hidden"
+    >
+      <div
+        class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-energy-blue/5 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-energy-gold/5 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 fade-in-section"
+      >
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-16 text-center">
+          Professional Experience
+        </h2>
+        <div class="timeline-container">
+          <!-- Job 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span
+                class="inline-block px-3 py-1 bg-energy-blue/20 text-energy-blue text-xs font-semibold rounded-full mb-3"
+                >Current</span
+              >
+              <h3 class="text-lg md:text-xl font-bold text-white mb-1">
+                Technical Product Owner - Upstream Data
+              </h3>
+              <p class="text-energy-gold font-medium text-sm mb-1">
+                S&P Global Energy | Texas, USA
+              </p>
+              <p class="text-gray-500 text-xs mb-4">Nov. 2023 – Present</p>
+              <ul class="text-gray-400 text-sm space-y-2">
+                <li>
+                  • Lead technical roadmap for Upstream Data portfolio using
+                  SAFe Agile principles
+                </li>
+                <li>
+                  • Translate complex subsurface dataset use-cases into
+                  actionable user stories
+                </li>
+                <li>
+                  • Champion CI/CD, observability, and secure design practices
+                </li>
+                <li>
+                  • Manage dependencies across cross-functional teams for 100%
+                  feature adoptability
+                </li>
+              </ul>
             </div>
+          </div>
+          <!-- Job 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="text-lg md:text-xl font-bold text-white mb-1">
+                Principal Research Engineer / Project Lead
+              </h3>
+              <p class="text-energy-gold font-medium text-sm mb-1">
+                University of Wyoming (HESS Partnership)
+              </p>
+              <p class="text-gray-500 text-xs mb-4">Jan. 2018 – Nov. 2023</p>
+              <ul class="text-gray-400 text-sm space-y-2">
+                <li>
+                  • Directed multi-year industry-funded research partnership
+                  with HESS
+                </li>
+                <li>
+                  •
+                  <strong class="text-energy-blue">Patent Holder:</strong>
+                  Alloush, R., Piri, M., & Lowry, E. W. (2024). Automated
+                  apparatus for characterization of fluid-solid systems (U.S.
+                  Patent No. 12,000,855). U.S. Patent and Trademark Office.
+                </li>
+                <li>
+                  • Improved experimental efficiency by 60% via optimization
+                  algorithms
+                </li>
+                <li>• Mentored team of researchers and graduate students</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Job 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="text-lg md:text-xl font-bold text-white mb-1">
+                Data Scientist (Volunteer)
+              </h3>
+              <p class="text-energy-gold font-medium text-sm mb-1">
+                PPDM Association | Remote
+              </p>
+              <p class="text-gray-500 text-xs mb-4">May 2020 – Present</p>
+              <ul class="text-gray-400 text-sm space-y-2">
+                <li>• Improved data processing throughput by 40%</li>
+                <li>
+                  • Architected modular workflow abstractions and automated
+                  pipelines
+                </li>
+                <li>
+                  • Built interactive Power BI dashboards for stakeholders
+                </li>
+                <li>• Recognized as Volunteer of the Month</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Job 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="text-lg md:text-xl font-bold text-white mb-1">
+                Reservoir Engineer
+              </h3>
+              <p class="text-energy-gold font-medium text-sm mb-1">
+                Saudi Aramco | Dhahran, Saudi Arabia
+              </p>
+              <p class="text-gray-500 text-xs mb-4">Jun. 2015 – Dec. 2017</p>
+              <ul class="text-gray-400 text-sm space-y-2">
+                <li>• Developed 3D geomechanical models (Petrel/Techlog)</li>
+                <li>
+                  • Deployed Artificial Neural Networks (ANN) for well log
+                  modeling
+                </li>
+                <li>
+                  • Built custom Python plugins for subsurface simulation suites
+                </li>
+                <li>• Optimized drilling safety and reservoir performance</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Job 5 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="text-lg md:text-xl font-bold text-white mb-1">
+                Petroleum Engineer / Software Instructor
+              </h3>
+              <p class="text-energy-gold font-medium text-sm mb-1">
+                Egyptian Petroleum Consultants | Cairo, Egypt
+              </p>
+              <p class="text-gray-500 text-xs mb-4">Jan. 2012 – Sep. 2012</p>
+              <ul class="text-gray-400 text-sm space-y-2">
+                <li>
+                  • Improved multiphase flow models by 20% through simulation
+                  studies
+                </li>
+                <li>• Led technical workshops for international customers</li>
+                <li>
+                  • Focused on engineering theory and software application
+                  intersection
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-
     <!-- Education & Certs -->
     <section id="education" class="py-20 md:py-24 bg-energy-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-                <!-- Education Column -->
-                <div>
-                    <h2 class="text-2xl font-bold text-white mb-8 border-b border-gray-700 pb-4">Education</h2>
-                    <div class="space-y-6">
-                        <div class="relative pl-6 border-l-2 border-energy-blue">
-                            <h3 class="text-lg font-bold text-white">Ph.D. - Petroleum Engineering</h3>
-                            <p class="text-energy-blue text-sm">University of Wyoming | 2018 – 2023</p>
-                            <p class="text-gray-400 text-sm mt-2">GPA: 3.7/4 • Patented automation module • ML
-                                efficiency +60%</p>
-                        </div>
-                        <div class="relative pl-6 border-l-2 border-gray-600">
-                            <h3 class="text-lg font-bold text-white">M.Sc. - Petroleum Engineering</h3>
-                            <p class="text-energy-blue text-sm">KFUPM | 2012 – 2015</p>
-                            <p class="text-gray-400 text-sm mt-2">GPA: 3.8/4 • Developed reservoir simulator • AI
-                                prediction +30%</p>
-                        </div>
-                        <div class="relative pl-6 border-l-2 border-gray-600">
-                            <h3 class="text-lg font-bold text-white">B.Sc. - Petroleum Engineering</h3>
-                            <p class="text-energy-blue text-sm">Suez University | 2006 – 2011</p>
-                            <p class="text-gray-400 text-sm mt-2">GPA: 3.3/4 • Automated cement injection system • First
-                                robotics club</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Certifications Column -->
-                <div>
-                    <h2 class="text-2xl font-bold text-white mb-8 border-b border-gray-700 pb-4">Certifications & Awards
-                    </h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                            <div class="text-energy-gold font-bold text-sm">AWS Certified</div>
-                            <div class="text-white text-sm">Machine Learning Specialty (2022)</div>
-                        </div>
-                        <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                            <div class="text-energy-gold font-bold text-sm">SAFe® 6</div>
-                            <div class="text-white text-sm">Certified Product Owner</div>
-                        </div>
-                        <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                            <div class="text-energy-gold font-bold text-sm">Intel®</div>
-                            <div class="text-white text-sm">Edge AI Scholarship (2020)</div>
-                        </div>
-                        <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                            <div class="text-energy-gold font-bold text-sm">Energy Vault</div>
-                            <div class="text-white text-sm">1st Place Winner</div>
-                        </div>
-                        <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                            <div class="text-energy-gold font-bold text-sm">Baker Hughes</div>
-                            <div class="text-white text-sm">Decarbonization 1st Place</div>
-                        </div>
-                        <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                            <div class="text-energy-gold font-bold text-sm">SPE</div>
-                            <div class="text-white text-sm">Best Paper Award</div>
-                        </div>
-                        <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                            <div class="text-energy-gold font-bold text-sm">NASA Space Apps</div>
-                            <div class="text-white text-sm">2nd Place Winner</div>
-                        </div>
-                        <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                            <div class="text-energy-gold font-bold text-sm">PPDM</div>
-                            <div class="text-white text-sm">Volunteer of the Month</div>
-                        </div>
-                    </div>
-                </div>
-
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Education Column -->
+          <div>
+            <h2
+              class="text-2xl font-bold text-white mb-8 border-b border-gray-700 pb-4"
+            >
+              Education
+            </h2>
+            <div class="space-y-6">
+              <div class="relative pl-6 border-l-2 border-energy-blue">
+                <h3 class="text-lg font-bold text-white">
+                  Ph.D. - Petroleum Engineering
+                </h3>
+                <p class="text-energy-blue text-sm">
+                  University of Wyoming | 2018 – 2023
+                </p>
+                <p class="text-gray-400 text-sm mt-2">
+                  GPA: 3.7/4 • Patented automation module • ML efficiency +60%
+                </p>
+              </div>
+              <div class="relative pl-6 border-l-2 border-gray-600">
+                <h3 class="text-lg font-bold text-white">
+                  M.Sc. - Petroleum Engineering
+                </h3>
+                <p class="text-energy-blue text-sm">KFUPM | 2012 – 2015</p>
+                <p class="text-gray-400 text-sm mt-2">
+                  GPA: 3.8/4 • Developed reservoir simulator • AI prediction
+                  +30%
+                </p>
+              </div>
+              <div class="relative pl-6 border-l-2 border-gray-600">
+                <h3 class="text-lg font-bold text-white">
+                  B.Sc. - Petroleum Engineering
+                </h3>
+                <p class="text-energy-blue text-sm">
+                  Suez University | 2006 – 2011
+                </p>
+                <p class="text-gray-400 text-sm mt-2">
+                  GPA: 3.3/4 • Automated cement injection system • First
+                  robotics club
+                </p>
+              </div>
             </div>
+          </div>
+          <!-- Certifications Column -->
+          <div>
+            <h2
+              class="text-2xl font-bold text-white mb-8 border-b border-gray-700 pb-4"
+            >
+              Certifications & Awards
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div
+                class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+              >
+                <div class="text-energy-gold font-bold text-sm">
+                  AWS Certified
+                </div>
+                <div class="text-white text-sm">
+                  Machine Learning Specialty (2022)
+                </div>
+              </div>
+              <div
+                class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+              >
+                <div class="text-energy-gold font-bold text-sm">SAFe® 6</div>
+                <div class="text-white text-sm">Certified Product Owner</div>
+              </div>
+              <div
+                class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+              >
+                <div class="text-energy-gold font-bold text-sm">Intel®</div>
+                <div class="text-white text-sm">Edge AI Scholarship (2020)</div>
+              </div>
+              <div
+                class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+              >
+                <div class="text-energy-gold font-bold text-sm">
+                  Energy Vault
+                </div>
+                <div class="text-white text-sm">1st Place Winner</div>
+              </div>
+              <div
+                class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+              >
+                <div class="text-energy-gold font-bold text-sm">
+                  Baker Hughes
+                </div>
+                <div class="text-white text-sm">Decarbonization 1st Place</div>
+              </div>
+              <div
+                class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+              >
+                <div class="text-energy-gold font-bold text-sm">SPE</div>
+                <div class="text-white text-sm">Best Paper Award</div>
+              </div>
+              <div
+                class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+              >
+                <div class="text-energy-gold font-bold text-sm">
+                  NASA Space Apps
+                </div>
+                <div class="text-white text-sm">2nd Place Winner</div>
+              </div>
+              <div
+                class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+              >
+                <div class="text-energy-gold font-bold text-sm">PPDM</div>
+                <div class="text-white text-sm">Volunteer of the Month</div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-
     <!-- Publications & Patents -->
     <section id="publications" class="py-20 md:py-24 bg-energy-900">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-12 text-center">Publications & Patents</h2>
-
-            <div class="mb-12">
-                <h3 class="text-xl font-semibold text-energy-blue mb-4 flex items-center">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    Patent
-                </h3>
-                <div
-                    class="glass-panel p-6 rounded-xl border-l-4 border-energy-gold hover:bg-white/5 transition-colors">
-                    <p class="text-white font-medium">AUTOMATED APPARATUS FOR CHARACTERIZATION OF FLUID-SOLID SYSTEMS
-                    </p>
-                    <p class="text-gray-400 text-sm mt-1">U.S. Patent No. 12,000,855 • 2024</p>
-                    <p class="text-gray-500 text-xs mt-2">Alloush, R., Piri, M., & Lowry, E. W.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3 class="text-xl font-semibold text-energy-blue mb-4 flex items-center">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                    </svg>
-                    Selected Publications
-                </h3>
-                <div class="space-y-3">
-                    <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                        <p class="text-gray-300 text-sm">Alloush, R. M., Sharma, K. V., Piri, M. <span
-                                class="text-white">Confine Phase Behavior of Propane-Hexane Binary Mixture: An
-                                Experimental Investigation...</span> (in press).</p>
-                    </div>
-                    <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                        <p class="text-gray-300 text-sm">Sharma, K. V.; Alloush, R. M.; Omer Salim; Piri, M. <span
-                                class="text-white">Confined Phase Behavior of n-hexane in Unconsolidated Nanoporous
-                                Media using Gravimetric Approach...</span> (in press).</p>
-                    </div>
-                    <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                        <p class="text-gray-300 text-sm">Alloush, R., Sharma, K., Piri, M., 2023. <span
-                                class="text-white">The effect of confinement on the phase behavior of propane in
-                                nanoporous media...</span> [in press].</p>
-                    </div>
-                    <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                        <p class="text-gray-300 text-sm">Sharma, K., Alloush, R., Piri, M., 2023. <span
-                                class="text-white">Confined phase behavior of ethane in nanoporous media...</span>
-                            Microporous and Mesoporous Materials 351 (2023): 112459.</p>
-                    </div>
-                    <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                        <p class="text-gray-300 text-sm">Moussa, T. M., Alloush, R. M., & Issaka, M. B. (2017). <span
-                                class="text-white">Automated Well Test Analysis Utilizing Self-Adaptive Differential
-                                Evolution Method.</span> Society of Petroleum Engineers.</p>
-                    </div>
-                    <div class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors">
-                        <p class="text-gray-300 text-sm">Alloush, R. M., Elkatatny, S. M., Mahmoud, M. A., et al.
-                            (2017). <span class="text-white">Estimation of Geomechanical Failure Parameters from Well
-                                Logs Using Artificial Intelligence Techniques.</span> SPE.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-12 text-center">
+          Publications & Patents
+        </h2>
+        <div class="mb-12">
+          <h3
+            class="text-xl font-semibold text-energy-blue mb-4 flex items-center"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            Patent
+          </h3>
+          <div
+            class="glass-panel p-6 rounded-xl border-l-4 border-energy-gold hover:bg-white/5 transition-colors"
+          >
+            <p class="text-white font-medium">
+              AUTOMATED APPARATUS FOR CHARACTERIZATION OF FLUID-SOLID SYSTEMS
+            </p>
+            <p class="text-gray-400 text-sm mt-1">
+              U.S. Patent No. 12,000,855 • 2024
+            </p>
+            <p class="text-gray-500 text-xs mt-2">
+              Alloush, R., Piri, M., & Lowry, E. W.
+            </p>
+          </div>
         </div>
+        <div>
+          <h3
+            class="text-xl font-semibold text-energy-blue mb-4 flex items-center"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+              />
+            </svg>
+            Selected Publications
+          </h3>
+          <div class="space-y-3">
+            <div
+              class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+            >
+              <p class="text-gray-300 text-sm">
+                Alloush, R. M., Sharma, K. V., Piri, M.
+                <span class="text-white"
+                  >Confine Phase Behavior of Propane-Hexane Binary Mixture: An
+                  Experimental Investigation...</span
+                >
+                (in press).
+              </p>
+            </div>
+            <div
+              class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+            >
+              <p class="text-gray-300 text-sm">
+                Sharma, K. V.; Alloush, R. M.; Omer Salim; Piri, M.
+                <span class="text-white"
+                  >Confined Phase Behavior of n-hexane in Unconsolidated
+                  Nanoporous Media using Gravimetric Approach...</span
+                >
+                (in press).
+              </p>
+            </div>
+            <div
+              class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+            >
+              <p class="text-gray-300 text-sm">
+                Alloush, R., Sharma, K., Piri, M., 2023.
+                <span class="text-white"
+                  >The effect of confinement on the phase behavior of propane in
+                  nanoporous media...</span
+                >
+                [in press].
+              </p>
+            </div>
+            <div
+              class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+            >
+              <p class="text-gray-300 text-sm">
+                Sharma, K., Alloush, R., Piri, M., 2023.
+                <span class="text-white"
+                  >Confined phase behavior of ethane in nanoporous
+                  media...</span
+                >
+                Microporous and Mesoporous Materials 351 (2023): 112459.
+              </p>
+            </div>
+            <div
+              class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+            >
+              <p class="text-gray-300 text-sm">
+                Moussa, T. M., Alloush, R. M., & Issaka, M. B. (2017).
+                <span class="text-white"
+                  >Automated Well Test Analysis Utilizing Self-Adaptive
+                  Differential Evolution Method.</span
+                >
+                Society of Petroleum Engineers.
+              </p>
+            </div>
+            <div
+              class="glass-panel p-4 rounded-lg hover:bg-white/5 transition-colors"
+            >
+              <p class="text-gray-300 text-sm">
+                Alloush, R. M., Elkatatny, S. M., Mahmoud, M. A., et al. (2017).
+                <span class="text-white"
+                  >Estimation of Geomechanical Failure Parameters from Well Logs
+                  Using Artificial Intelligence Techniques.</span
+                >
+                SPE.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
     <!-- Teaching Experience -->
     <section class="py-20 md:py-24 bg-energy-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center">Teaching Experience</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass-panel p-6 rounded-xl">
-                    <h3 class="text-lg font-bold text-white mb-2">University Instructor</h3>
-                    <p class="text-gray-400 text-sm mb-3">University of Wyoming, KFUPM, American University in Cairo</p>
-                    <p class="text-gray-500 text-xs">2012 – 2023</p>
-                    <ul class="text-gray-400 text-sm mt-4 space-y-1">
-                        <li>• Designed petroleum engineering courses</li>
-                        <li>• Delivered specialized technical trainings</li>
-                        <li>• Supervised experimental lab sessions</li>
-                    </ul>
-                </div>
-                <div class="glass-panel p-6 rounded-xl">
-                    <h3 class="text-lg font-bold text-white mb-2">Professional Instructor</h3>
-                    <p class="text-gray-400 text-sm mb-3">Petroleum and Natural Gas Institute of Tech. & Training</p>
-                    <p class="text-gray-500 text-xs">Khobar, Saudi Arabia | 2013 – 2018</p>
-                    <ul class="text-gray-400 text-sm mt-4 space-y-1">
-                        <li>• Trained 100+ sessions across 5 countries</li>
-                        <li>• 94% satisfaction score achieved</li>
-                        <li>• Developed essential petroleum engineering training</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center">
+          Teaching Experience
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="glass-panel p-6 rounded-xl">
+            <h3 class="text-lg font-bold text-white mb-2">
+              University Instructor
+            </h3>
+            <p class="text-gray-400 text-sm mb-3">
+              University of Wyoming, KFUPM, American University in Cairo
+            </p>
+            <p class="text-gray-500 text-xs">2012 – 2023</p>
+            <ul class="text-gray-400 text-sm mt-4 space-y-1">
+              <li>• Designed petroleum engineering courses</li>
+              <li>• Delivered specialized technical trainings</li>
+              <li>• Supervised experimental lab sessions</li>
+            </ul>
+          </div>
+          <div class="glass-panel p-6 rounded-xl">
+            <h3 class="text-lg font-bold text-white mb-2">
+              Professional Instructor
+            </h3>
+            <p class="text-gray-400 text-sm mb-3">
+              Petroleum and Natural Gas Institute of Tech. & Training
+            </p>
+            <p class="text-gray-500 text-xs">
+              Khobar, Saudi Arabia | 2013 – 2018
+            </p>
+            <ul class="text-gray-400 text-sm mt-4 space-y-1">
+              <li>• Trained 100+ sessions across 5 countries</li>
+              <li>• 94% satisfaction score achieved</li>
+              <li>• Developed essential petroleum engineering training</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
-
     <!-- Contact Section -->
     <section id="contact" class="py-20 md:py-24 bg-energy-900">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">Let's Connect</h2>
-            <p class="text-gray-400 mb-8 max-w-2xl mx-auto text-base md:text-lg">
-                Interested in discussing AI applications in the energy sector, potential collaborations, or speaking
-                opportunities?
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://www.linkedin.com/in/ramialloush/" target="_blank" rel="noopener noreferrer"
-                    class="inline-flex items-center justify-center px-6 py-3.5 border border-transparent text-base font-medium rounded-lg text-energy-900 bg-energy-blue hover:bg-sky-400 transition-all hover:shadow-[0_0_20px_rgba(56,189,248,0.4)]">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                    LinkedIn Profile
-                </a>
-                <a href="mailto:hello@ramialloush.com"
-                    class="inline-flex items-center justify-center px-6 py-3.5 glass-panel hover:bg-white/10 text-white font-medium rounded-lg transition-all border border-white/20">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    Send Email
-                </a>
-            </div>
+      <div
+        class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section"
+      >
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">
+          Let's Connect
+        </h2>
+        <p class="text-gray-400 mb-8 max-w-2xl mx-auto text-base md:text-lg">
+          Interested in discussing AI applications in the energy sector,
+          potential collaborations, or speaking opportunities?
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="https://www.linkedin.com/in/ramialloush/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-6 py-3.5 border border-transparent text-base font-medium rounded-lg text-energy-900 bg-energy-blue hover:bg-sky-400 transition-all hover:shadow-[0_0_20px_rgba(56,189,248,0.4)]"
+          >
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              />
+            </svg>
+            LinkedIn Profile
+          </a>
+          <a
+            href="mailto:hello@ramialloush.com"
+            class="inline-flex items-center justify-center px-6 py-3.5 glass-panel hover:bg-white/10 text-white font-medium rounded-lg transition-all border border-white/20"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+            Send Email
+          </a>
         </div>
+      </div>
     </section>
-
     <!-- Footer -->
     <footer class="bg-black py-8 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-500 text-sm">
-                2026 Dr. Rami M. Alloush. All rights reserved.
-            </p>
-
-        </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-gray-500 text-sm">
+          2026 Dr. Rami M. Alloush. All rights reserved.
+        </p>
+      </div>
     </footer>
-
     <!-- Scripts -->
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenuClose = document.getElementById("mobile-menu-close");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
-        function toggleMenu() {
-            mobileMenu.classList.toggle('open');
-            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+      function toggleMenu() {
+        mobileMenu.classList.toggle("open");
+        document.body.style.overflow = mobileMenu.classList.contains("open")
+          ? "hidden"
+          : "";
+      }
+
+      mobileMenuBtn.addEventListener("click", toggleMenu);
+      mobileMenuClose.addEventListener("click", toggleMenu);
+
+      // Close mobile menu when clicking a link
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", toggleMenu);
+      });
+
+      // Intersection Observer for Fade-in Animations - Optimized
+      document.addEventListener("DOMContentLoaded", () => {
+        // Register Service Worker for caching
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("/sw.js").catch(() => {});
         }
 
-        mobileMenuBtn.addEventListener('click', toggleMenu);
-        mobileMenuClose.addEventListener('click', toggleMenu);
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
 
-        // Close mobile menu when clicking a link
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', toggleMenu);
-        });
-
-        // Intersection Observer for Fade-in Animations - Optimized
-        document.addEventListener('DOMContentLoaded', () => {
-            // Register Service Worker for caching
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js').catch(() => {});
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
             }
-            
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
+          });
+        }, observerOptions);
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            const sections = document.querySelectorAll('.fade-in-section');
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+        const sections = document.querySelectorAll(".fade-in-section");
+        sections.forEach((section) => {
+          observer.observe(section);
         });
+      });
 
-        // Navbar background on scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-energy-900/95');
-            } else {
-                navbar.classList.remove('bg-energy-900/95');
-            }
-        });
+      // Navbar background on scroll
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("bg-energy-900/95");
+        } else {
+          navbar.classList.remove("bg-energy-900/95");
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>
