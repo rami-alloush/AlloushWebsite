@@ -26,4 +26,6 @@ jobs:
           script: |
             cd ~/repositories/AlloushWebsite
             git pull origin main
+            export DEPLOYPATH=/home/ramiallo/public_html/
+            /bin/cp -R * $DEPLOYPATH
             echo "Deployment completed successfully!"
